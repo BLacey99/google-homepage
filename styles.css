@@ -1,0 +1,87 @@
+
+.container-nav-menu li{
+    display:inline-block;
+}
+.aboutLink{
+    grid-area:about;
+    
+}
+.storeLink{
+    grid-area:store;
+
+}
+
+.gmailLink{
+    grid-area:gmail;
+
+}
+
+.imagesLink{
+    grid-area:images;
+
+}
+
+.servicesButton{
+    grid-area:services;
+    width:50px;
+    height:50px;
+    font-size:100%;
+}
+
+.loginButton{
+    grid-area:login;
+    width:150px;
+    height:50px;
+    font-size:100%;
+
+}
+
+
+
+.container-nav-menu{
+    border:3px;
+    border-style:dotted;
+    border-color:blue;
+    background:lightgray;
+    list-style-type:none;
+    display:grid;
+    grid-template-columns:100px / repeat(7,1fr);
+    
+    
+    grid-template-areas:
+    "about store . gmail images services login";
+    
+}
+
+.logo{
+    margin:auto;
+    border:3px;
+    border-style:dotted;
+    border-color:purple;
+}
+
+main{
+    border:3px;
+    border-style:dotted;
+    border-color:red;
+    display:grid;
+    margin:auto;
+    width:50%;
+    grid-template-areas:
+    "logo logo"
+    "search"
+    "button button";
+
+}
+
+footer{
+    border:3px;
+    border-style:dotted;
+    border-color: green;
+}
+
+.container-footer-links{
+    list-style-type:none;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+}
