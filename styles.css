@@ -1,3 +1,23 @@
+/*Review*/
+
+body{
+    margin:0px;
+    
+}
+
+header{
+    height:60px;
+    padding:6px;
+    margin:0;
+  
+}
+
+nav{
+   position:relative;
+   margin:0;
+
+}
+
 
 .container-nav-menu li{
     display:inline-block;
@@ -39,49 +59,165 @@
 
 
 .container-nav-menu{
-    border:3px;
-    border-style:dotted;
-    border-color:blue;
-    background:lightgray;
     list-style-type:none;
     display:grid;
     grid-template-columns:100px / repeat(7,1fr);
-    
-    
     grid-template-areas:
     "about store . gmail images services login";
-    
 }
 
 .logo{
     margin:auto;
-    border:3px;
-    border-style:dotted;
-    border-color:purple;
 }
 
 main{
-    border:3px;
-    border-style:dotted;
-    border-color:red;
-    display:grid;
+    padding:15%;
     margin:auto;
     width:50%;
-    grid-template-areas:
-    "logo logo"
-    "search"
-    "button button";
+    position:relative;
 
 }
 
+.grid-main{
+    display:grid;
+    grid-template-columns:auto auto;
+    grid-template-rows:auto auto auto;
+    justify-content:space-evenly;
+    align-content:center;
+    position:relative;
+    grid-template-areas:
+    "logo logo"
+    "search-bar search-bar"
+    "search-button random-button";
+    grid-row-gap:5%;
+}
+
+
+.voice-search-button:hover{
+    cursor:pointer;
+}
+
+
+.logo{
+    grid-column:1/2;
+    grid-row:1/2;
+    grid-area:logo;
+}
+
+.search-bar{
+    grid-column:1/2;
+    grid-row:2/2;
+    position:relative;
+    grid-area:search-bar;
+    border-radius:15px;
+    height:35px;
+    border-color:initial;
+    background-color:transparent;
+    border-style:solid;
+    border-color:rgba(206, 206, 206, 0.685);
+    /*border-color:black;*/
+
+    background-image:url("images/search-magnifying-glass.jpg");
+    background-repeat:no-repeat;
+    background-size:25px 25px;
+    background-position-x:left;
+    background-position-y:center;
+
+  
+}
+
+.search-bar:focus{
+   outline:none;
+}
+
+.voice-search-button{
+    width:20px;
+    height:25px;
+    background:url("/images/google-mic.svg.png") no-repeat;
+    background-size:contain;
+    border:none;
+    grid-row-start:2;
+    grid-column-start:2;
+    grid-row-end: span 2;
+    justify-self:center;
+    z-index:1;
+    transform:translate(32px,7px);
+    
+    
+}
+
+
+
+/*.search-wrap{
+    position:relative;
+    grid-column:1/2;
+    grid-row:2/2;
+    
+}
+
+.search-wrap img{
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    width:20px;
+    height:25px;
+
+
+}
+
+.voice-search-button{
+    width:20px;
+    height:25px;
+   position:relative;
+  
+
+}
+*/
+.search-button{
+grid-area:search-button;
+}
+
+.random-button{
+grid-area:random-button;
+}
+/*.voice-search-button img{
+    border:3px solid green;
+    position:absolute;
+    top:0px;
+    left:0px;
+   
+    width:20px;
+    height:25px;
+    grid-column:2/2;
+    grid-row:2/2;
+
+}
+*/
+
+
 footer{
-    border:3px;
-    border-style:dotted;
-    border-color: green;
+
 }
 
 .container-footer-links{
     list-style-type:none;
     display:grid;
     grid-template-columns:repeat(6,1fr);
+}
+
+a:link{
+    text-decoration:none;
+    color: #70757a;
+    line-height:24px;
+    display:inline-block;
+    vertical-align:middle;
+}
+a:hover{
+    text-decoration:underline;
+}
+a{
+    white-space:nowrap;
+    padding:15px;
 }
