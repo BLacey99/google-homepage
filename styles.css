@@ -1,43 +1,51 @@
+
 body{
     margin:0px;  
+    display:flex;
+    flex-direction:column;
+    align-items:space-between;
+    height:100vh;
 }
 header{
-    height:60px;
-    padding:6px;
-    margin:0;
+    margin:0px;
 }
 nav{
-   position:relative;
+   
    margin:0;
 }
 
 .container-nav-left li{
     display:inline-block;
+    align-items:stretch;
+  
     
 }
 .container-nav-right li{
     display:inline-block;
+    align-items:stretch;
+    
 }
 .aboutLink{
-    grid-area:about;
+  
 }
 .storeLink{
-    grid-area:store;
+   
 }
 .gmailLink{
-    grid-area:gmail;
+  
+    
 }
 .imagesLink{
-    grid-area:images;
+    
 }
 .servicesButton{
-    grid-area:services;
-    width:50px;
-    height:50px;
+    
+    width:40px;
+    height:40px;
     font-size:100%;
 }
 .loginButton{
-    grid-area:login;
+   
     width:150px;
     height:50px;
     font-size:100%;
@@ -50,31 +58,37 @@ nav{
     align-items:center;
     flex-wrap:nowrap;
     white-space:nowrap;
+    padding:0px;
 
 }
 
 .servicesButton{
-    border-radius:50%;
-    width: 32px;
-    height:32px;
+    
+    width: 24px;
+    height:24px;
    
     
     cursor:pointer;
-    background-image:url("/images/dots-menu.svg") no-repeat;
-    background-size:contain;
-  
+    background:url("/images/dots-menu.svg") no-repeat;
+    background-size:16px 16px;
+    border:transparent;
+    background-color:transparent;
+    opacity:70%;
     background-position-x:center;
     background-position-y:center;
+    margin-left:15px;
 }
 
 .loginButton{
     border-radius:50%;
     width: 32px;
     height:32px;
+    margin-left:16px;
+    margin-right:12px;
     cursor:pointer;
-    background-image:url("/images/profile-icon.jpg") no-repeat;
+    background:url("/images/profile-icon.jpg") no-repeat;
     background-size:contain;
-  
+    border:transparent;
     background-position-x:center;
     background-position-y:center;
 
@@ -82,6 +96,8 @@ nav{
 
 .logo{
     margin:auto;
+    padding-bottom:20px;
+    
 }
 main{
     padding:15%;
@@ -92,18 +108,17 @@ main{
 }
 
 .grid-main{
+   
     display:grid;
-    grid-template-columns:auto auto;
-    grid-template-rows:auto auto;
+    grid-template-columns:auto ;
+    grid-template-rows:auto auto auto;
     justify-content:space-evenly;
     align-content:center;
     position:relative;
     grid-template-areas:
-    "logo logo"
-    "search-bar search-bar"
-    "search-button random-button";
- 
-    
+    "logo"
+    "search-bar"
+    "buttons";
     
 }
 .voice-search-button:hover{
@@ -124,6 +139,7 @@ main{
     width:700px;
     margin-left:auto;
     margin-right:auto;
+
 
 }
 
@@ -197,23 +213,22 @@ main{
 
 }
 
-/*
+
  .buttons{
     display:flex;
     align-items:center;
     justify-content:space-between;
     flex:row;
     padding:10px;
-    top:0;
-    left:0; 
+    justify-content:center;
 }
-*/
+
 
 .search-button[type="submit"]{
-width:50%;
+width:20%;
 height:30px;
 background-color: #f8f9fa;
-border:1px solid red;
+border-color:transparent;
 cursor:pointer;
 padding:0px 16px;
 border-radius:4px;
@@ -226,11 +241,12 @@ grid-row:3/3;
 }
 
 .random-button[type="submit"]{
-   width:50%;
-
+   width:20%;
+   border-color:transparent;
 height:30px;
 background-color: #f8f9fa;
-border:1px solid red;
+flex-wrap:nowrap;
+
 cursor:pointer;
 padding:0px 16px;
 border-radius:4px;
@@ -239,13 +255,15 @@ margin:11px 4px;
 grid-area:random-button;
 grid-column:2/2;
 grid-row:3/3;
+padding:0px;
+overflow:hidden;
 }
 
 
 
 
 footer{
-margin:0px;
+
 }
 .footer-container{
     list-style-type:none;
@@ -272,6 +290,12 @@ a:link{
 }
 a:hover{
     text-decoration:underline;
+}
+a:active, :visited{
+    text-decoration:none;
+    color:#70757a;
+    line-height:24px;
+
 }
 a{
     white-space:nowrap;
