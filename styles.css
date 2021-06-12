@@ -1,87 +1,100 @@
-/*Review*/
-
 body{
-    margin:0px;
-    
+    margin:0px;  
 }
-
 header{
     height:60px;
     padding:6px;
     margin:0;
-  
 }
-
 nav{
    position:relative;
    margin:0;
-
 }
 
-
-.container-nav-menu li{
+.container-nav-left li{
+    display:inline-block;
+    
+}
+.container-nav-right li{
     display:inline-block;
 }
 .aboutLink{
     grid-area:about;
-    
 }
 .storeLink{
     grid-area:store;
-
 }
-
 .gmailLink{
     grid-area:gmail;
-
 }
-
 .imagesLink{
     grid-area:images;
-
 }
-
 .servicesButton{
     grid-area:services;
     width:50px;
     height:50px;
     font-size:100%;
 }
-
 .loginButton{
     grid-area:login;
     width:150px;
     height:50px;
     font-size:100%;
+}
+.flex-nav{
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    white-space:nowrap;
 
 }
 
+.servicesButton{
+    border-radius:50%;
+    width: 32px;
+    height:32px;
+   
+    
+    cursor:pointer;
+    background-image:url("/images/dots-menu.svg") no-repeat;
+    background-size:contain;
+  
+    background-position-x:center;
+    background-position-y:center;
+}
 
+.loginButton{
+    border-radius:50%;
+    width: 32px;
+    height:32px;
+    cursor:pointer;
+    background-image:url("/images/profile-icon.jpg") no-repeat;
+    background-size:contain;
+  
+    background-position-x:center;
+    background-position-y:center;
 
-.container-nav-menu{
-    list-style-type:none;
-    display:grid;
-    grid-template-columns:100px / repeat(7,1fr);
-    grid-template-areas:
-    "about store . gmail images services login";
 }
 
 .logo{
     margin:auto;
 }
-
 main{
     padding:15%;
     margin:auto;
     width:50%;
     position:relative;
-
+   
 }
 
 .grid-main{
     display:grid;
     grid-template-columns:auto auto;
-    grid-template-rows:auto auto auto;
+    grid-template-rows:auto auto;
     justify-content:space-evenly;
     align-content:center;
     position:relative;
@@ -89,124 +102,167 @@ main{
     "logo logo"
     "search-bar search-bar"
     "search-button random-button";
-    grid-row-gap:5%;
+ 
+    
+    
 }
-
-
 .voice-search-button:hover{
     cursor:pointer;
 }
-
-
 .logo{
     grid-column:1/2;
     grid-row:1/2;
     grid-area:logo;
+
+    }
+
+.search{
+    grid-area:search-bar;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    width:700px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+.magnifying-glass{
+    background-image:url("images/search-magnifying-glass.jpg");
+    background-repeat:no-repeat;
+    background-size:25px 25px;
+    background-position-x:center;
+    background-position-y:center;
+    height:41px;
+    width:35px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    padding-left:5px;
+    border-color:rgba(206, 206, 206, 0.685);
+    border-style:solid;
+    position:relative;
+    flex-basis:50em;
+    background-color:white;
+    border-right-color:white;
+    border-right-width:0px;
+
+    max-width:100px;
+    
+
+
 }
 
 .search-bar{
     grid-column:1/2;
     grid-row:2/2;
     position:relative;
-    grid-area:search-bar;
-    border-radius:15px;
+    justify-items:last baseline;
     height:35px;
     border-color:initial;
     background-color:transparent;
     border-style:solid;
     border-color:rgba(206, 206, 206, 0.685);
     /*border-color:black;*/
-
-    background-image:url("images/search-magnifying-glass.jpg");
-    background-repeat:no-repeat;
-    background-size:25px 25px;
-    background-position-x:left;
-    background-position-y:center;
-
-  
+    flex-basis:800em;
+    border-left-color:white;
+    border-left-width:0px;
+    border-right-color:white;
+    border-right-width:0px;
+    max-width:800px;
 }
-
 .search-bar:focus{
    outline:none;
 }
 
+
 .voice-search-button{
-    width:20px;
-    height:25px;
     background:url("/images/google-mic.svg.png") no-repeat;
     background-size:contain;
-    border:none;
-    grid-row-start:2;
-    grid-column-start:2;
-    grid-row-end: span 2;
-    justify-self:center;
-    z-index:1;
-    transform:translate(32px,7px);
-    
-    
-}
-
-
-
-/*.search-wrap{
+    background-size:25px 25px;
+    background-position-x:center;
+    background-position-y:center;
+    height:41px;
+    width:30px;
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+    padding-right:5px;
+    border-color:rgba(206, 206, 206, 0.685);
+    border-left-width:0px;
+    border-left-color:white;
+    border-style:solid;
     position:relative;
-    grid-column:1/2;
-    grid-row:2/2;
-    
-}
-
-.search-wrap img{
-    position:absolute;
-    top:0px;
-    right:0px;
-    left:0px;
-    bottom:0px;
-    width:20px;
-    height:25px;
-
+    flex-basis:50em;
+    max-width:100px;
 
 }
 
-.voice-search-button{
-    width:20px;
-    height:25px;
-   position:relative;
-  
-
+/*
+ .buttons{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex:row;
+    padding:10px;
+    top:0;
+    left:0; 
 }
 */
-.search-button{
+
+.search-button[type="submit"]{
+width:50%;
+height:30px;
+background-color: #f8f9fa;
+border:1px solid red;
+cursor:pointer;
+padding:0px 16px;
+border-radius:4px;
+font-size:14px;
+margin:11px 4px;
 grid-area:search-button;
+grid-column:1/1;
+grid-row:3/3;
+
 }
 
-.random-button{
+.random-button[type="submit"]{
+   width:50%;
+
+height:30px;
+background-color: #f8f9fa;
+border:1px solid red;
+cursor:pointer;
+padding:0px 16px;
+border-radius:4px;
+font-size:14px;
+margin:11px 4px;
 grid-area:random-button;
+grid-column:2/2;
+grid-row:3/3;
 }
-/*.voice-search-button img{
-    border:3px solid green;
-    position:absolute;
-    top:0px;
-    left:0px;
-   
-    width:20px;
-    height:25px;
-    grid-column:2/2;
-    grid-row:2/2;
 
-}
-*/
+
 
 
 footer{
-
+margin:0px;
 }
-
-.container-footer-links{
+.footer-container{
     list-style-type:none;
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    padding:0px;
 }
 
+.footer-left li{
+    display:inline-block;
+}
+.footer-right li{
+    display:inline-block;
+}
 a:link{
     text-decoration:none;
     color: #70757a;

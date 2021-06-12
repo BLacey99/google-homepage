@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
-<header>
-    <nav>
-        
-        <ul class="container-nav-menu">
-            <li class="aboutLink"><a href="https://about.google/">About</a></li>
-            <li class="storeLink"><a href="https://store.google.com">Store</a></li>
-            <li class="gmailLink"><a href="https://google.com/gmail/">Gmail</a></li>
-            <li class="imagesLink"><a href="#">Images</a></li>
-            <button class="servicesButton">Services Placeholder</button>
-            <button class="loginButton">Profile placeholder</button>
-        </ul>
-    </div>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <div class="flex-nav">
+                <ul class="container-nav-left">
+                    <li class="aboutLink"><a href="https://about.google/">About</a></li>
+                    <li class="storeLink"><a href="https://store.google.com">Store</a></li>
+                </ul>
+                <ul class="container-nav-right">
+                    <li class="gmailLink"><a href="https://google.com/gmail/">Gmail</a></li>
+                    <li class="imagesLink"><a href="#">Images</a></li>
+                    <button class="servicesButton"></button>
+                    <button class="loginButton"></button>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
 
 
     <main>
         <div class="grid-main">
-    <img src="images/google-logo.png" alt="The Google Logo" class="logo">
-
-<!--<div class="search-wrap">--->
-    <input class="search-bar"></input>
-    <button class="voice-search-button"></button>
-<!--</div>--->
+            <img src="images/google-logo.png" alt="The Google Logo" class="logo">
 
 
+            <div class="search">
+                <button class="magnifying-glass"></button>
+                <input class="search-bar"></input>
 
+                <button class="voice-search-button"></button>
+            </div>
 
-    <button class="search-button">Google Search</button>
-    <button class="random-button">I'm Feeling Lucky</button>
+            <!--div class="buttons"-->
+            <button class="search-button" type="submit">Google Search</button>
+            <button class="random-button" type="submit">I'm Feeling Lucky</button>
+            <!--/div-->
         </div>
     </main>
 
@@ -48,18 +55,23 @@
 
 
 
-    
-<footer>
-    
-<ul class="container-footer-links">
-    <li><a href="https://ads.google.com">Advertisting</a></li>
-    <li><a href="https://smallbusiness.withgoogle.com">Business</a></li>
-    <li><a href="https://www.google.com/search/howsearchworks">How Search works</a></li>
-    <li><a href="https://policies.google.com">Privacy</a></li>
-    <li><a href="https://policies.google.com/terms">Terms</a></li>
-    <li><a href="#">Settings</a></li>
-</ul>
 
-</footer>
+    <footer>
+
+        <div class="footer-container">
+            <ul class="footer-left">
+                <li><a href="https://ads.google.com">Advertisting</a></li>
+                <li><a href="https://smallbusiness.withgoogle.com">Business</a></li>
+                <li><a href="https://www.google.com/search/howsearchworks">How Search works</a></li>
+            </ul>
+
+            <ul class="footer-right">
+                <li><a href="https://policies.google.com">Privacy</a></li>
+                <li><a href="https://policies.google.com/terms">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>
