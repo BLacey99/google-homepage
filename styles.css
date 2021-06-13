@@ -76,6 +76,7 @@ nav{
     opacity:70%;
     background-position-x:center;
     background-position-y:center;
+    padding:9px;
     margin-left:15px;
 }
 
@@ -85,6 +86,7 @@ nav{
     height:32px;
     margin-left:16px;
     margin-right:12px;
+    padding:10px;
     cursor:pointer;
     background:url("/images/profile-icon.jpg") no-repeat;
     background-size:contain;
